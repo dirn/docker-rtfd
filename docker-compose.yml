@@ -1,0 +1,14 @@
+cache:
+  image: redis
+
+db:
+  image: postgres
+
+web:
+  build: .
+  ports:
+    - "8000:8000"
+  links:
+    - cache
+    - db
+  command: ./manage.py runserver 0.0.0.0:8000
