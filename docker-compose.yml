@@ -4,6 +4,9 @@ cache:
 db:
   image: postgres
 
+search:
+  image: elasticsearch
+
 web:
   build: .
   ports:
@@ -11,4 +14,5 @@ web:
   links:
     - cache
     - db
+    - search
   command: ./manage.py runserver 0.0.0.0:8000

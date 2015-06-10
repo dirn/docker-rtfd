@@ -11,6 +11,8 @@ DATABASES = {
 
 REDIS = {'host': 'cache', 'db': 0, 'port': 6379}
 
+ES_HOSTS = ['search:9200']
+
 SOCIALACCOUNT_PROVIDERS = {
     'github': {
         'SCOPE': ['user:email', 'read:org', 'admin:repo_hook', 'repo'],
